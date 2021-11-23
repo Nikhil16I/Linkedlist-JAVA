@@ -20,11 +20,8 @@ CurrentNode.next = Newnode;
  }
 
 public void InsertBetween(int Afterelement , int Data) {
-	Node CurrentNode = Head;
-	Node Newnode=new Node(Data);
-	while(CurrentNode.Data != Afterelement) {
-		CurrentNode=CurrentNode.next;
-	}
+	Node CurrentNode = SearchbyNode(Afterelement);
+	Node Newnode=new Node(Data);	
 	
 	Newnode.next =CurrentNode.next;
 	CurrentNode.next=Newnode;
