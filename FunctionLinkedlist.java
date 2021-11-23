@@ -18,6 +18,17 @@ while(CurrentNode.next != null) {
 CurrentNode.next = Newnode;
 
  }
+
+public void InsertBetween(int Afterelement , int Data) {
+	Node CurrentNode = Head;
+	Node Newnode=new Node(Data);
+	while(CurrentNode.Data != Afterelement) {
+		CurrentNode=CurrentNode.next;
+	}
+	
+	Newnode.next =CurrentNode.next;
+	CurrentNode.next=Newnode;
+}
 public void Displayelements() {
  Node CurrentNode = Head;
  
