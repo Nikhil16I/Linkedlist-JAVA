@@ -41,6 +41,20 @@ public void Poplast(){
   }
 exNode.next=null;
 }
+public Node SearchbyNode(int Data) {
+	Node CurrentNode=Head;
+	
+	while(CurrentNode != null) {
+	   if(CurrentNode.Data == Data) {
+	   System.out.println("Node you were searching for "+Data);
+	return CurrentNode;
+	}
+	CurrentNode=CurrentNode.next;
+ }
+System.out.println("Node not found"+Data);
+return null;
+}
+
 public void Displayelements() {
  Node CurrentNode = Head;
  

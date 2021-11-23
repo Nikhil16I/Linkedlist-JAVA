@@ -11,9 +11,7 @@ public class Linkedlist {
 	newlist.InsertBetween(56, 70);
 newlist.Displayelements();
 
-newlist.Poplast();
-newlist.Displayelements();
-
-	}
+newlist.SearchbyNode(56);	
+}
 		
   }
