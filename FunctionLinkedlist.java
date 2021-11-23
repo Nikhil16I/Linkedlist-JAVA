@@ -74,7 +74,7 @@ while(CurrentNode != null) {
 	Count++;
 	CurrentNode=CurrentNode.next;
   }
-return Count++;
+return Count;
 }
   
 public void Displayelements() {
