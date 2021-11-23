@@ -4,9 +4,9 @@ public class Linkedlist {
 	public static void main(String[] args) {
 	
 	FunctionLinkedlist newlist =new FunctionLinkedlist();
-	newlist.Firstelements(70);	
-	newlist.Firstelements(30);
-	newlist.Firstelements(56);
+	newlist.Firstelements(56);	
+	newlist.LastElements(30);
+	newlist.LastElements(70);
 	
 newlist.Displayelements();
 
