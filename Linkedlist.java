@@ -9,16 +9,9 @@ public class Linkedlist {
 	Node node2nd =new Node(30);
 	Node node3rd =new Node(70);
 	
-	Node Head = node1st;
-	node1st.setNext(node2nd);
-	node2nd.setNext(node3rd);
-	Node Tail = node3rd;
+	node1st.next=node2nd;
+	node2nd.next=node3rd;
 	
-	Node current = Head;
-	while(current!= null) {
-System.out.println(current.getData());
- current=current.getNext();
 	}
 		
   }
-}
