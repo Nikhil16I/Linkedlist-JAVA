@@ -11,7 +11,7 @@ public class Linkedlist {
 	newlist.InsertBetween(56, 70);
 newlist.Displayelements();
 
-newlist.Pop();
+newlist.Poplast();
 newlist.Displayelements();
 
 	}

@@ -32,6 +32,15 @@ public void InsertBetween(int Afterelement , int Data) {
 public void Pop() {
 	Head=Head.next;
 }
+public void Poplast(){
+ Node CurrentNode =Head;
+ Node exNode = Head;
+ while(CurrentNode.next != null) {
+	 exNode=CurrentNode;
+	 CurrentNode=CurrentNode.next;			 
+  }
+exNode.next=null;
+}
 public void Displayelements() {
  Node CurrentNode = Head;
  
