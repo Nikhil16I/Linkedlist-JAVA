@@ -29,6 +29,9 @@ public void InsertBetween(int Afterelement , int Data) {
 	Newnode.next =CurrentNode.next;
 	CurrentNode.next=Newnode;
 }
+public void Pop() {
+	Head=Head.next;
+}
 public void Displayelements() {
  Node CurrentNode = Head;
  
