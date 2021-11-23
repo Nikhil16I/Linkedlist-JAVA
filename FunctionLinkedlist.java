@@ -21,8 +21,11 @@ CurrentNode.next = Newnode;
 
 public void InsertBetween(int Afterelement , int Data) {
 	Node CurrentNode = SearchbyNode(Afterelement);
-	Node Newnode=new Node(Data);	
-	
+	if(CurrentNode == null) {
+	System.out.println("Node is not available in List");
+	return;
+	}
+	Node Newnode=new Node(Data);
 	Newnode.next =CurrentNode.next;
 	CurrentNode.next=Newnode;
 }
@@ -43,7 +46,6 @@ public Node SearchbyNode(int Data) {
 	
 	while(CurrentNode != null) {
 	   if(CurrentNode.Data == Data) {
-	   System.out.println("Node you were searching for "+Data);
 	return CurrentNode;
 	}
 	CurrentNode=CurrentNode.next;
@@ -51,7 +53,30 @@ public Node SearchbyNode(int Data) {
 System.out.println("Node not found"+Data);
 return null;
 }
-
+  public void Deleteelement(int Data) {
+	  Node CurrentNode =Head;
+	  Node exNode =Head;
+	 while (CurrentNode != null) {
+		if(CurrentNode.Data == Data) {
+			exNode.next= CurrentNode.next;
+			return;
+		}
+	exNode=CurrentNode;
+	CurrentNode=CurrentNode.next;
+	 }
+	 System.out.println("Node you were searching for "+Data);
+  }
+  
+  public int Size() {
+	  Node CurrentNode = Head;
+	  int Count = 0;
+while(CurrentNode != null) {
+	Count++;
+	CurrentNode=CurrentNode.next;
+  }
+return Count++;
+}
+  
 public void Displayelements() {
  Node CurrentNode = Head;
  

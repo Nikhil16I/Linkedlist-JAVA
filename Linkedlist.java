@@ -7,9 +7,13 @@ public class Linkedlist {
 		newlist.Firstelements(56);	
 		newlist.LastElements(30);
 		newlist.LastElements(70);
-		newlist.Displayelements();
 		newlist.InsertBetween(30, 40);	
+		newlist.Displayelements();
+		System.out.println("size of element " +newlist.Size());
+		
+		newlist.Deleteelement(40);
 	newlist.Displayelements();
+	System.out.println("size of element " +newlist.Size());
 	}
 			
 }
