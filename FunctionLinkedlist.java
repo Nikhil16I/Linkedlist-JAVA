@@ -76,6 +76,48 @@ while(CurrentNode != null) {
   }
 return Count;
 }
+
+	public void InsertingHead(int value) {
+		Node Newnode = new Node(value);
+		Newnode.next = Head;
+		Head = Newnode;
+		Displayelements();
+	}
+  public void Sortelement(int Data) {
+		Node Newnode = new Node(Data);
+		
+		if (Head == null) {
+			InsertingHead(Data);
+			return;
+		}
+		
+		if (Head.Data > Newnode.Data) {
+			InsertingHead(Data);
+			return;
+		}
+		
+		Node CurrentNode = Head;
+		Node exNode = Head;
+		
+		while (CurrentNode != null) {
+			if(Newnode.Data < CurrentNode.Data) {
+				Newnode.next = CurrentNode;
+				exNode.next = Newnode;
+				break;
+			}
+			else if (Newnode.Data > CurrentNode.Data && CurrentNode.next == null) {
+				CurrentNode.next = Newnode;
+				break;
+			}
+			
+			exNode = CurrentNode;
+			CurrentNode = CurrentNode.next;
+		}
+		
+		Displayelements();
+	}
+
+  
   
 public void Displayelements() {
  Node CurrentNode = Head;
